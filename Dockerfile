@@ -1,16 +1,5 @@
 FROM ubuntu:22.04
 
-#RUN apt-get update && \
-    #apt-get install -y g++ git make cmake 
-
-#WORKDIR /cmake-docker
-
-#RUN git clone https://github.com/svquick/cmake-exercise.git . 
-
-#RUN g++ main.cpp -o main
-
-#CMD ["./build_and_run.sh"]
-
 RUN apt-get update && \
     apt-get install -y \
         build-essential \
@@ -37,4 +26,4 @@ RUN apt-get update && \
     apt-get install -y libdeal.II-dev && \
     rm -rf /var/lib/apt/lists/*
 
-CMD ["/bin/bash"]
+CMD ["./build_and_run.sh"]
